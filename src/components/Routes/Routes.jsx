@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 
 const Routes = () => {
-  const [userEmail, setUserEmail] = useState([""]);
+  const [userData, setUserData] = useState([""]);
   useEffect(() => {
     Axios.get("https://planetbase-waitlist.herokuapp.com/userdata")
       .then((res) => {
@@ -15,7 +15,7 @@ const Routes = () => {
   }, []);
   return (
     <div className="container mx-auto text-center font-medium text-lg mt-3">
-      {userEmail.map((user) => (
+      {userData.map((user) => (
         <>
           <div
             className="bg-white border mb-3 border-gray-500 px-3 py-3 rounded-lg"
