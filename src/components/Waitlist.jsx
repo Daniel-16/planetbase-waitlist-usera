@@ -6,7 +6,7 @@ const Waitlists = () => {
   return (
     <>
       <div className="container mt-5 mx-auto flex flex-col md:flex-row items-center px-6 md:px-0">
-        <div className="flex-col">
+        <div className="flex-col text-center">
           <p className="font-bold text-xl animate-bounce text-center">
             Coming Soon!
           </p>
