@@ -3,11 +3,15 @@ import Axios from "axios";
 
 const Form = () => {
   const [email, setEmail] = useState("");
+  const [fullname, setFullname] = useState("");
+  const [number, setNumber] = useState("");
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
   const handleForm = (e) => {
     e.preventDefault();
-    Axios.post("https://planetbase-waitlist.herokuapp.com/emailaddress", {
+    Axios.post("https://planetbase-waitlist.herokuapp.com/user", {
+      fullname,
+      number,
       email,
     })
       .then((res) => {
@@ -21,7 +25,9 @@ const Form = () => {
       .catch((err) => {
         console.error(err);
         if (err.toString().includes("400")) {
-          setError("Oops! It Seems like you have already entered your email.");
+          setError(
+            "Oops! An error has occured. Check your details and try again."
+          );
         }
         setTimeout(() => {
           setError("");
@@ -29,27 +35,48 @@ const Form = () => {
       });
     console.log(email);
   };
-  const handleInput = (e) => {
+  const handleEmail = (e) => {
     setEmail(e.target.value);
   };
+  const handleFullname = (e) => {
+    setFullname(e.target.value);
+  };
+  const handleNumber = (e) => {
+    setNumber(e.target.value);
+  };
   return (
-    <form className="py-6 container mx-auto" onSubmit={handleForm}>
+    <form className="py-6 container mx-auto space-y-3" onSubmit={handleForm}>
       <input
-        className="border pl-6 pr-32 py-3 rounded-full outline-none w-80"
+        className="border px-4 py-3 rounded-lg outline-none w-80 md:mr-3"
+        type="text"
+        required
+        placeholder="Enter your fullname"
+        style={{ borderColor: "#0D1B57" }}
+        onChange={handleFullname}
+      />
+      <input
+        className="border px-4 py-3 rounded-lg outline-none w-80"
+        type="text"
+        required
+        placeholder="Enter your phone number"
+        style={{ borderColor: "#0D1B57" }}
+        onChange={handleNumber}
+      />
+      <input
+        className="border px-4 py-3 rounded-lg outline-none w-80"
         type="email"
         required
         placeholder="Enter your email"
         style={{ borderColor: "#0D1B57" }}
-        onChange={handleInput}
+        onChange={handleEmail}
       />
-      <div className="relative max-w-fit" style={{ left: 206, bottom: 45 }}>
-        <button
-          className="px-3 py-2 rounded-full text-white"
-          style={{ backgroundColor: "#0D1B57" }}
-        >
-          Join Waitlist
-        </button>
-      </div>
+      <button
+        type="submit"
+        className="py-3 rounded-lg px-4 text-white md:ml-3"
+        style={{ backgroundColor: "#0D1B57" }}
+      >
+        Join Waitlist
+      </button>
       <div
         className="bg-green-300 border border-green-500 p-6 rounded-lg"
         style={!success ? { display: "none" } : { display: "block" }}

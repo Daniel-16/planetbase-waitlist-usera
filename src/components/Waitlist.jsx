@@ -5,7 +5,7 @@ import Form from "./Form";
 const Waitlists = () => {
   return (
     <>
-      <div className="container mt-5 mx-auto flex flex-col md:flex-row items-center px-6 md:px-0">
+      <div className="container mt-5 mx-auto flex flex-col md:flex-row items-center px-6">
         <div className="flex-col">
           <p className="font-bold text-xl animate-bounce text-center">
             Coming Soon!
