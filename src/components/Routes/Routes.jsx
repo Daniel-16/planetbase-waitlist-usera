@@ -7,7 +7,7 @@ const Routes = () => {
     Axios.get("https://planetbase-waitlist.herokuapp.com/userdata")
       .then((res) => {
         console.log(res);
-        setUserEmail(res.data);
+        setUserData(res.data);
       })
       .catch((err) => {
         console.error(err);
