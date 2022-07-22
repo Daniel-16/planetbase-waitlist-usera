@@ -35,14 +35,14 @@ const Form = () => {
   return (
     <form className="py-6 container mx-auto" onSubmit={handleForm}>
       <input
-        className="border pl-6 pr-32 py-3 rounded-full outline-none w-auto"
+        className="border pl-6 pr-32 py-3 rounded-full outline-none w-80"
         type="email"
         required
         placeholder="Enter your email"
         style={{ borderColor: "#0D1B57" }}
         onChange={handleInput}
       />
-      <div className="relative max-w-fit" style={{ left: 222, bottom: 45 }}>
+      <div className="relative max-w-fit" style={{ left: 206, bottom: 45 }}>
         <button
           className="px-3 py-2 rounded-full text-white"
           style={{ backgroundColor: "#0D1B57" }}
