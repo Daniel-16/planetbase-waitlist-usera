@@ -7,7 +7,9 @@ const Form = () => {
   const [error, setError] = useState("");
   const handleForm = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:5000/emailaddress", { email })
+    Axios.post("https://planetbase-waitlist.herokuapp.com/emailaddress", {
+      email,
+    })
       .then((res) => {
         console.log(res);
         setSuccess(true);

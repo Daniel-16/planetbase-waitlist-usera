@@ -4,7 +4,7 @@ import Axios from "axios";
 const Routes = () => {
   const [userEmail, setUserEmail] = useState([""]);
   useEffect(() => {
-    Axios.get("http://localhost:5000/email")
+    Axios.get("https://planetbase-waitlist.herokuapp.com/email")
       .then((res) => {
         console.log(res);
         setUserEmail(res.data);
