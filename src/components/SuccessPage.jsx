@@ -7,8 +7,8 @@ const SuccessPage = () => {
     <div>
       <Navbar />
       <div className="conainer mx-auto mt-3">
-        <div className="flex flex-col items-center px-6 md:flex-row">
-          <div className="flex-col">
+        <div className="flex flex-col items-center md:px-6 md:flex-row">
+          <div className="flex-col px-6">
             <h1 className="font-bold text-5xl animate-pulse">Thank You!</h1>
             <p>
               Thank you for joining the waitlist. We would let you know as soon
