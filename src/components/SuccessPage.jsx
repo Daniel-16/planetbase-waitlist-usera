@@ -15,7 +15,7 @@ const SuccessPage = () => {
               as we launch.
             </p>
           </div>
-          <img className="max-w-md" src={ThankYouImg} alt="Thank You" />
+          <img className="max-w-sm" src={ThankYouImg} alt="Thank You" />
         </div>
         {/* <div className=""> */}
         {/* </div> */}

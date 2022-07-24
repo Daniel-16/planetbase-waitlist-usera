@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const [email, setEmail] = useState("");
@@ -7,6 +8,7 @@ const Form = () => {
   const [number, setNumber] = useState("");
   // const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
+  let navigate = useNavigate();
   const handleForm = (e) => {
     e.preventDefault();
     Axios.post("https://planetbase-waitlist.herokuapp.com/user", {
@@ -21,7 +23,8 @@ const Form = () => {
         // setTimeout(() => {
         //   setSuccess(false);
         // }, 10000);
-        window.open("/thankyou");
+        // window.open("/thankyou");
+        return navigate("/thankyou");
       })
       .catch((err) => {
         console.error(err);
