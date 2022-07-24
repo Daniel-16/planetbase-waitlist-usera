@@ -1,14 +1,16 @@
 import React from "react";
 import Waitlists from "./components/Waitlist";
-import About from "./components/About";
+// import About from "./components/About";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Admin from "./components/Routes/Routes";
 import Navbar from "./components/Navbar";
+import SuccessPage from "./components/SuccessPage";
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/thankyou" exact element={<SuccessPage />} />
         <Route
           path="/"
           exact
@@ -16,7 +18,7 @@ function App() {
             <>
               <Navbar />
               <Waitlists />
-              <About />
+              {/* <About /> */}
             </>
           }
         />

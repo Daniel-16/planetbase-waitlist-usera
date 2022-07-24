@@ -7,23 +7,26 @@ const Waitlists = () => {
     <>
       <div className="container mt-5 mx-auto flex flex-col md:flex-row items-center px-6">
         <div className="flex-col">
-          <p className="font-bold text-xl animate-bounce text-center">
+          <p className="font-bold text-2xl animate-bounce text-center">
             Coming Soon!
           </p>
           <h1 className="text-3xl md:text-5xl font-bold">
-            Get notified when we launch
+            Get Sponsors for your event
           </h1>
-          <p className="text-gray-600">
-            Planetbase is soon to launch but we do not want you to miss out when
-            we do.
+          <p className="text-gray-600 pt-3">
+            No Gatekeepers. Goodbye to Rejection!
             <br />
-            Enter your email address so we notify you as soon as we launch.
+            Fill in the form below to get notified as soon as we launch.
           </p>
           <Form />
         </div>
         {/* <img className="md:max-w-md z-10 blur-lg" src={background} alt="blur" /> */}
         <img className="md:max-w-md" src={logo} alt="Waitlists" />
       </div>
+      <p className="text-gray-400 text-center px-3">
+        Virtual Events include Instagram Lives, Twitter Spaces, YouTube Lives,
+        Clubhouse Rooms and many more.
+      </p>
     </>
   );
 };

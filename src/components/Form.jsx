@@ -5,7 +5,7 @@ const Form = () => {
   const [email, setEmail] = useState("");
   const [fullname, setFullname] = useState("");
   const [number, setNumber] = useState("");
-  const [success, setSuccess] = useState(false);
+  // const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
   const handleForm = (e) => {
     e.preventDefault();
@@ -16,11 +16,12 @@ const Form = () => {
     })
       .then((res) => {
         console.log(res);
-        setSuccess(true);
+        // setSuccess(true);
         setError("");
-        setTimeout(() => {
-          setSuccess(false);
-        }, 10000);
+        // setTimeout(() => {
+        //   setSuccess(false);
+        // }, 10000);
+        window.open("/thankyou");
       })
       .catch((err) => {
         console.error(err);
@@ -46,38 +47,62 @@ const Form = () => {
   };
   return (
     <form className="py-6 container mx-auto space-y-3" onSubmit={handleForm}>
-      <input
-        className="border px-4 py-3 rounded-lg outline-none w-80 md:mr-3"
-        type="text"
-        required
-        placeholder="Enter your fullname"
-        style={{ borderColor: "#0D1B57" }}
-        onChange={handleFullname}
-      />
-      <input
-        className="border px-4 py-3 rounded-lg outline-none w-80"
-        type="text"
-        required
-        placeholder="Enter your phone number"
-        style={{ borderColor: "#0D1B57" }}
-        onChange={handleNumber}
-      />
-      <input
-        className="border px-4 py-3 rounded-lg outline-none w-80"
-        type="email"
-        required
-        placeholder="Enter your email"
-        style={{ borderColor: "#0D1B57" }}
-        onChange={handleEmail}
-      />
-      <button
-        type="submit"
-        className="py-3 rounded-lg px-4 text-white md:ml-3"
-        style={{ backgroundColor: "#0D1B57" }}
-      >
-        Join Waitlist
-      </button>
-      <div
+      <div className="flex flex-col">
+        <small className="text-sm">
+          Name <span className="text-red-700">*</span>
+        </small>
+        <input
+          className="border px-4 py-3 rounded-lg outline-none w-80 md:mr-3"
+          type="text"
+          required
+          placeholder="Enter your name"
+          style={{ borderColor: "#0D1B57" }}
+          onChange={handleFullname}
+        />
+      </div>
+      {/* <br /> */}
+      <div className="flex flex-col">
+        <small className="text-sm">
+          Phone Number <span className="text-red-700">*</span>
+        </small>
+        <input
+          className="border px-4 py-3 rounded-lg outline-none w-80"
+          type="tel"
+          required
+          placeholder="+999 9999 9999 99"
+          style={{ borderColor: "#0D1B57" }}
+          onChange={handleNumber}
+        />
+      </div>
+      <div className="flex flex-col">
+        <small className="text-sm">
+          Email <span className="text-red-700">*</span>
+        </small>
+        <input
+          className="border px-4 py-3 rounded-lg outline-none w-80"
+          type="email"
+          required
+          placeholder="example@mail.com"
+          style={{ borderColor: "#0D1B57" }}
+          onChange={handleEmail}
+        />
+      </div>
+      <div className="flex-col">
+        <small
+          className="text-red-500"
+          style={error === "" ? { display: "none" } : { display: "block" }}
+        >
+          <p>{error}</p>
+        </small>
+        <button
+          type="submit"
+          className="py-3 rounded-lg px-4 text-white md:ml-3"
+          style={{ backgroundColor: "#0D1B57" }}
+        >
+          Be the first to know
+        </button>
+      </div>
+      {/* <div
         className="bg-green-300 border border-green-500 p-6 rounded-lg"
         style={!success ? { display: "none" } : { display: "block" }}
       >
@@ -85,13 +110,7 @@ const Form = () => {
           Thank you for joining the waitlist. We would notify you as soon as we
           launch
         </p>
-      </div>
-      <div
-        className="bg-red-300 border border-red-500 p-6 rounded-lg"
-        style={error === "" ? { display: "none" } : { display: "block" }}
-      >
-        <p>{error}</p>
-      </div>
+      </div> */}
     </form>
   );
 };
