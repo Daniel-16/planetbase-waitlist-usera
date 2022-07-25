@@ -17,7 +17,8 @@ const Form = () => {
       email,
     })
       .then((res) => {
-        console.log(res);
+        console.log(res.data);
+        localStorage.setItem("Fullname", fullname);
         // setSuccess(true);
         setError("");
         // setTimeout(() => {
@@ -36,6 +37,7 @@ const Form = () => {
         setTimeout(() => {
           setError("");
         }, 10000);
+        localStorage.clear();
       });
     console.log(email);
   };
