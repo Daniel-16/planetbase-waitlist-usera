@@ -104,7 +104,7 @@ const Form = () => {
           className="py-3 rounded-lg px-4 text-white md:ml-3"
           style={{ backgroundColor: "#0D1B57" }}
         >
-          Be the first to know
+          Be The First To Know
         </button>
       </div>
       {/* <div

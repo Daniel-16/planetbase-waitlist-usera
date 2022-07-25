@@ -1,20 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import ThankYouImg from "../assets/images/thankYou.png";
-import {
-  EmailShareButton,
-  FacebookShareButton,
-  LinkedinShareButton,
-  TelegramShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-  FacebookIcon,
-  EmailIcon,
-  WhatsappIcon,
-  TwitterIcon,
-  TelegramIcon,
-  LinkedinIcon,
-} from "react-share";
+import { RWebShare } from "react-web-share";
 
 const SuccessPage = () => {
   return (
@@ -30,25 +17,22 @@ const SuccessPage = () => {
               as we launch.
             </p>
             <p>Feel free to share an invite to anyone and show your love.</p>
-            <div className="text-center space-x-3">
-              <EmailShareButton url="https://planetbase.netlify.app">
-                <EmailIcon size={32} round={true} />
-              </EmailShareButton>
-              <FacebookShareButton url="https://planetbase.netlify.app">
-                <FacebookIcon size={32} round={true} />
-              </FacebookShareButton>
-              <WhatsappShareButton url="https://planetbase.netlify.app">
-                <WhatsappIcon size={32} round={true} />
-              </WhatsappShareButton>
-              <TelegramShareButton url="https://planetbase.netlify.app">
-                <TelegramIcon size={32} round={true} />
-              </TelegramShareButton>
-              <LinkedinShareButton url="https://planetbase.netlify.app">
-                <LinkedinIcon size={32} round={true} />
-              </LinkedinShareButton>
-              <TwitterShareButton url="https://planetbase.netlify.app">
-                <TwitterIcon size={32} round={true} />
-              </TwitterShareButton>
+            <div className="text-center">
+              <RWebShare
+                data={{
+                  text: "Planetbase is launching soon. Join the waitlist so not to miss out",
+                  url: "https://planetbase.netlify.app",
+                  title: "Planetbase",
+                }}
+                onClick={() => console.log("Share button clicked")}
+              >
+                <button
+                  className="px-4 py-2 text-white rounded-lg"
+                  style={{ backgroundColor: "#0D1B57" }}
+                >
+                  Share an Invite
+                </button>
+              </RWebShare>
             </div>
           </div>
           <img className="w-1/2" src={ThankYouImg} alt="Thank You" />
