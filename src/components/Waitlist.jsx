@@ -11,22 +11,22 @@ const Waitlists = () => {
             Coming Soon!
           </p>
           <h1 className="text-3xl md:text-5xl font-bold">
-            Get Sponsors for your event
+            Get Sponsors For Your Event
           </h1>
-          <p className="text-gray-600 pt-3">
+          <p className="font-bold pt-3">
             No Gatekeepers. Goodbye to Rejection!
             <br />
-            Fill in the form below to get notified as soon as we launch.
+            <span className="font-bold">
+              Virtual Events include Instagram Lives, <br />
+              Twitter Spaces, YouTube Lives, Clubhouse Rooms and many more.
+            </span>
           </p>
           <Form />
         </div>
         {/* <img className="md:max-w-md z-10 blur-lg" src={background} alt="blur" /> */}
         <img className="md:max-w-md" src={logo} alt="Waitlists" />
       </div>
-      <p className="text-gray-400 text-center px-3">
-        Virtual Events include Instagram Lives, Twitter Spaces, YouTube Lives,
-        Clubhouse Rooms and many more.
-      </p>
+      <p className="text-gray-400 text-center px-3"></p>
     </>
   );
 };

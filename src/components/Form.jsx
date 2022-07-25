@@ -66,19 +66,6 @@ const Form = () => {
       {/* <br /> */}
       <div className="flex flex-col">
         <small className="text-sm">
-          Phone Number <span className="text-red-700">*</span>
-        </small>
-        <input
-          className="border px-4 py-3 rounded-lg outline-none w-80"
-          type="tel"
-          required
-          placeholder="+999 9999 9999 99"
-          style={{ borderColor: "#0D1B57" }}
-          onChange={handleNumber}
-        />
-      </div>
-      <div className="flex flex-col">
-        <small className="text-sm">
           Email <span className="text-red-700">*</span>
         </small>
         <input
@@ -88,6 +75,19 @@ const Form = () => {
           placeholder="example@mail.com"
           style={{ borderColor: "#0D1B57" }}
           onChange={handleEmail}
+        />
+      </div>
+      <div className="flex flex-col">
+        <small className="text-sm">
+          Phone Number <span className="text-red-700">*</span>
+        </small>
+        <input
+          className="border px-4 py-3 rounded-lg outline-none w-80"
+          type="tel"
+          required
+          placeholder="+999 9999 9999 99"
+          style={{ borderColor: "#0D1B57" }}
+          onChange={handleNumber}
         />
       </div>
       <div className="flex-col">
