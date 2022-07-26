@@ -13,7 +13,9 @@ const Waitlists = () => {
           <h1 className="text-3xl md:text-5xl font-bold">
             Get Sponsors For Your Physical or Virtual Event
           </h1>
-          <p className="pt-3">No Gatekeepers. Goodbye to Rejection!</p>
+          <p className="pt-3 underline">
+            No Gatekeepers. Goodbye to Rejection!
+          </p>
           <Form />
         </div>
         {/* <img className="md:max-w-md z-10 blur-lg" src={background} alt="blur" /> */}
