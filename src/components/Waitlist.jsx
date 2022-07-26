@@ -11,15 +11,10 @@ const Waitlists = () => {
             Coming Soon!
           </p>
           <h1 className="text-3xl md:text-5xl font-bold">
-            Get Sponsors For Your Event
+            Get Sponsors For Your Physical or Virtual Event
           </h1>
-          <p className="font-bold pt-3">
+          <p className="font-bold pt-3 underline">
             No Gatekeepers. Goodbye to Rejection!
-            <br />
-            <span className="font-bold">
-              Virtual Events include Instagram Lives, <br />
-              Twitter Spaces, YouTube Lives, Clubhouse Rooms and many more.
-            </span>
           </p>
           <Form />
         </div>
