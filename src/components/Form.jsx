@@ -108,8 +108,8 @@ const Form = () => {
         </button>
       </div>
       <small className="italic">
-        Virtual Events include Instagram Lives, <br />
-        Twitter Spaces, YouTube Lives, Clubhouse Rooms and many more.
+        Virtual Events include Instagram Lives, Twitter Spaces, YouTube Lives,
+        Clubhouse Rooms and many more.
       </small>
       {/* <div
         className="bg-green-300 border border-green-500 p-6 rounded-lg"
