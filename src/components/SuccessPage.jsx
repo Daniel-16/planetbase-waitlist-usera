@@ -39,17 +39,17 @@ const SuccessPage = () => {
               </p>
               <RWebShare
                 data={{
-                  text: "Planetbase is launching soon. Join the waitlist so not to miss out",
+                  text: "Get Sponsors For Your Event. Join The Waitlist!",
                   url: "https://planetbase.netlify.app",
                   title: "Planetbase",
                 }}
                 onClick={() => console.log("Share button clicked")}
               >
                 <button
-                  className="font-bold underline"
-                  style={{ color: "#0D1B57" }}
+                  className="px-4 py-2 rounded-lg text-white"
+                  style={{ backgroundColor: "#0D1B57" }}
                 >
-                  Share
+                  Send an Invite
                 </button>
               </RWebShare>
               <br />
