@@ -1,37 +1,43 @@
 import React from "react";
 import Navbar from "./Navbar";
-import ThankYouImg from "../assets/images/thankYou.png";
+// import ThankYouImg from "../assets/images/thankYou.png";
 import { RWebShare } from "react-web-share";
 
 const SuccessPage = () => {
   return (
     <div>
       <Navbar />
-      <div className="conainer mx-auto mt-3">
-        <div className="flex flex-col items-center md:px-6 md:flex-row">
+      <div className="container mx-auto mt-3">
+        <div className="md:px-6 md:flex-row">
           <div className="flex-col px-3">
             <h1 className="font-bold text-5xl animate-pulse">
               Thank You, {localStorage.getItem("Fullname")}!
             </h1>
-            <p className="mt-3">
-              My team and I are building a tool to help you make more money from
-              your events by making it easy for brands to find and partner with
-              you.
+            <div className="mt-3">
+              <p>
+                My team and I are building a tool to help you make more money
+                from your events by making it easy for brands to find and
+                partner with you.
+              </p>
               <br />
-              Sending out proposals to get rejected won't have to happen again.
-              You won't have to deal with selfish gatekeepers, accept less, or
-              compromise.
+              <p>
+                Sending out proposals to get rejected won't have to happen
+                again. You won't have to deal with selfish gatekeepers, accept
+                less, or compromise.
+              </p>
               <br />
-              We're putting power in your hands.
+              <p>We're putting power in your hands.</p>
               <br />
-              We will be in touch with you {localStorage.getItem("Fullname")},
-              to help collect your valuable input and provide value to you from
-              the get-go.
+              <p>
+                I will be in touch with you {localStorage.getItem("Fullname")},
+                to help collect your valuable input and provide value to you
+                from the get-go.
+              </p>
               <br />
-              Lastly, please share the waitlist link with 2 of your event
-              creator friends.
-            </p>
-            <div className="text-center">
+              <p>
+                Lastly, please share the waitlist link with 2 of your event
+                creator friends.
+              </p>
               <RWebShare
                 data={{
                   text: "Planetbase is launching soon. Join the waitlist so not to miss out",
@@ -41,15 +47,21 @@ const SuccessPage = () => {
                 onClick={() => console.log("Share button clicked")}
               >
                 <button
-                  className="px-4 py-2 text-white rounded-lg"
-                  style={{ backgroundColor: "#0D1B57" }}
+                  className="font-bold underline"
+                  style={{ color: "#0D1B57" }}
                 >
-                  Share an Invite
+                  Share
                 </button>
               </RWebShare>
+              <br />
+              <p className="pt-2">Thank you again.</p>
+              <p>
+                Love, <br /> Jibola. <br />
+                Team Lead.
+              </p>
             </div>
           </div>
-          <img className="w-1/2" src={ThankYouImg} alt="Thank You" />
+          {/* <img className="w-1/2" src={ThankYouImg} alt="Thank You" /> */}
         </div>
         {/* <div className=""> */}
         {/* </div> */}
