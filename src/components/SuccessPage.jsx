@@ -21,9 +21,8 @@ const SuccessPage = () => {
               </p>
               <br />
               <p>
-                Sending out proposals to get rejected won't have to happen
-                again. You won't have to deal with selfish gatekeepers, accept
-                less, or compromise.
+                Sending out proposals only to get rejected? Never again! You
+                won't deal with selfish gatekeepers or settle.
               </p>
               <br />
               <p>We're putting power in your hands.</p>
@@ -54,7 +53,7 @@ const SuccessPage = () => {
                 </button>
               </RWebShare>
               <br />
-              <p className="pt-2">Thank you again.</p>
+              <p className="pt-2 pb-2">Thank you again.</p>
               <p>
                 Love, <br /> Jibola. <br />
                 Team Lead.
