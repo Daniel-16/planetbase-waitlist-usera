@@ -28,7 +28,7 @@ const SuccessPage = () => {
               <p>We're putting power in your hands.</p>
               <br />
               <p>
-                I will be in touch with you {localStorage.getItem("Fullname")},
+                {localStorage.getItem("Fullname")}, I will be in touch with you
                 to help collect your valuable input and provide value to you
                 from the get-go.
               </p>
