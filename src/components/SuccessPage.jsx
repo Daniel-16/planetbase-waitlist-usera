@@ -24,9 +24,9 @@ const SuccessPage = () => {
               <br />
               We're putting power in your hands.
               <br />
-              {localStorage.getItem("Fullname")}, I will be in touch with you to
-              help collect your valuable input and provide value to you from the
-              get-go.
+              We will be in touch with you {localStorage.getItem("Fullname")},
+              to help collect your valuable input and provide value to you from
+              the get-go.
               <br />
               Lastly, please share the waitlist link with 2 of your event
               creator friends.
