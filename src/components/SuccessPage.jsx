@@ -34,7 +34,7 @@ const SuccessPage = () => {
               <RWebShare
                 data={{
                   text: "The Future of Experiential Marketing",
-                  url: "https://planetbase.netlify.app",
+                  url: "https://planetbase-waitlist.netlify.app",
                   title: "Planetbase",
                 }}
                 onClick={() => console.log("Share button clicked")}
