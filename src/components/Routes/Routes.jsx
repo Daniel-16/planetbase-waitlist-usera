@@ -4,7 +4,7 @@ import Axios from "axios";
 const Routes = () => {
   const [userData, setUserData] = useState([""]);
   useEffect(() => {
-    Axios.get("https://planetbase-waitlist.herokuapp.com/userdata")
+    Axios.get("https://planetbase-waitlist-usera.herokuapp.com/userdata")
       .then((res) => {
         console.log(res);
         setUserData(res.data);

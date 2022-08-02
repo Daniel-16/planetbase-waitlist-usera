@@ -5,20 +5,21 @@ import { useNavigate } from "react-router-dom";
 const Form = () => {
   const [email, setEmail] = useState("");
   const [fullname, setFullname] = useState("");
-  const [number, setNumber] = useState("");
+  const [companyName, setCompanyName] = useState("");
   // const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
   let navigate = useNavigate();
   const handleForm = (e) => {
     e.preventDefault();
-    Axios.post("https://planetbase-waitlist.herokuapp.com/user", {
+    Axios.post("https://planetbase-waitlist-usera.herokuapp.com/user", {
       fullname,
-      number,
+      companyName,
       email,
     })
       .then((res) => {
         console.log(res.data);
         localStorage.setItem("Fullname", fullname);
+        localStorage.setItem("CompanyName", companyName);
         // setSuccess(true);
         setError("");
         // setTimeout(() => {
@@ -47,9 +48,6 @@ const Form = () => {
   const handleFullname = (e) => {
     setFullname(e.target.value);
   };
-  const handleNumber = (e) => {
-    setNumber(e.target.value);
-  };
   return (
     <form className="py-6 container mx-auto space-y-3" onSubmit={handleForm}>
       <div className="flex flex-col">
@@ -68,6 +66,21 @@ const Form = () => {
       {/* <br /> */}
       <div className="flex flex-col">
         <small className="text-sm">
+          Company Name <span className="text-red-700">*</span>
+        </small>
+        <input
+          className="border px-4 py-3 rounded-lg outline-none w-80"
+          type="text"
+          required
+          placeholder="Enter the name of your company here"
+          style={{ borderColor: "#0D1B57" }}
+          onChange={(e) => {
+            setCompanyName(e.target.value);
+          }}
+        />
+      </div>
+      <div className="flex flex-col">
+        <small className="text-sm">
           Email <span className="text-red-700">*</span>
         </small>
         <input
@@ -79,19 +92,7 @@ const Form = () => {
           onChange={handleEmail}
         />
       </div>
-      <div className="flex flex-col">
-        <small className="text-sm">
-          Phone Number <span className="text-red-700">*</span>
-        </small>
-        <input
-          className="border px-4 py-3 rounded-lg outline-none w-80"
-          type="tel"
-          required
-          placeholder="+999 9999 9999 99"
-          style={{ borderColor: "#0D1B57" }}
-          onChange={handleNumber}
-        />
-      </div>
+
       <div className="flex-col">
         <small
           className="text-red-500"
@@ -104,7 +105,7 @@ const Form = () => {
           className="py-3 rounded-lg px-4 text-white md:ml-3"
           style={{ backgroundColor: "#0D1B57" }}
         >
-          Be The First To Know
+          Join The Waitlist
         </button>
       </div>
       <small className="italic">

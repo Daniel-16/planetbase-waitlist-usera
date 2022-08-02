@@ -10,36 +10,30 @@ const SuccessPage = () => {
       <div className="container mx-auto mt-3">
         <div className="md:px-6 md:flex-row">
           <div className="flex-col px-3">
-            <h1 className="font-bold text-5xl animate-pulse">
-              Thank You, {localStorage.getItem("Fullname")}!
+            <h1 className="font-bold">
+              Dear {localStorage.getItem("Fullname")},
             </h1>
             <div className="mt-3">
+              <p>Thank you for showing interest in this tool.</p>
+              <br />
               <p>
-                My team and I are building a tool to help you make more money
-                from your events by making it easy for brands to find and
-                partner with you.
+                Our tool will help {localStorage.getItem("CompanyName")}:
+                <ol>
+                  <li>1. Introduce your product to target users.</li>
+                  <li>2. Create memorable and meaningful brand experience.</li>
+                  <li>3. Increase customer loyalty.</li>
+                </ol>
               </p>
               <br />
               <p>
-                Sending out proposals only to get rejected? Never again! You
-                won't deal with selfish gatekeepers or settle.
+                I will be in touch with you to ensure you get optimal value when
+                the product launches.
               </p>
               <br />
-              <p>We're putting power in your hands.</p>
-              <br />
-              <p>
-                {localStorage.getItem("Fullname")}, I will be in touch with you
-                to help collect your valuable input and provide value to you
-                from the get-go.
-              </p>
-              <br />
-              <p>
-                Lastly, please share the waitlist link with 2 of your event
-                creator friends.
-              </p>
+              <p>Lastly, please share the waitlist with a CEO you know.</p>
               <RWebShare
                 data={{
-                  text: "Get Sponsors For Your Event. Join The Waitlist!",
+                  text: "The Future of Experiential Marketing",
                   url: "https://planetbase.netlify.app",
                   title: "Planetbase",
                 }}
@@ -49,14 +43,14 @@ const SuccessPage = () => {
                   className="px-4 py-2 rounded-lg text-white"
                   style={{ backgroundColor: "#0D1B57" }}
                 >
-                  Send an Invite
+                  Tell A CEO
                 </button>
               </RWebShare>
               <br />
-              <p className="pt-2 pb-2">Thank you again.</p>
+              <p className="pt-2 pb-2">Cheers to day 1.</p>
               <p>
-                Love, <br /> Jibola. <br />
-                Team Lead.
+                Love, <br /> Daniel. <br />
+                Senior Developer.
               </p>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/images/img-02.png";
+import logo from "../assets/images/img-01.png";
 import Form from "./Form";
 
 const Waitlists = () => {
@@ -11,9 +11,11 @@ const Waitlists = () => {
             Coming Soon!
           </p>
           <h1 className="text-3xl md:text-5xl font-bold">
-            Get Sponsors For Your Physical or Virtual Event
+            The Future of Experiential Marketing
           </h1>
-          <p className="pt-3">No Gatekeepers. Goodbye to Rejection!</p>
+          <p className="pt-3">
+            Tell your story. Introduce your product. Build user loyalty
+          </p>
           <Form />
         </div>
         {/* <img className="md:max-w-md z-10 blur-lg" src={background} alt="blur" /> */}
