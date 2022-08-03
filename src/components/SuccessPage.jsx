@@ -10,20 +10,16 @@ const SuccessPage = () => {
       <div className="container mx-auto mt-3">
         <div className="md:px-6 md:flex-row">
           <div className="flex-col px-3">
-            <h1 className="font-bold">
-              Dear {localStorage.getItem("Fullname")},
-            </h1>
+            <h1>Dear {localStorage.getItem("Fullname")},</h1>
             <div className="mt-3">
               <p>Thank you for showing interest in this tool.</p>
               <br />
-              <p>
-                Our tool will help {localStorage.getItem("CompanyName")}:
-                <ol>
-                  <li>1. Introduce your product to target users.</li>
-                  <li>2. Create memorable and meaningful brand experience.</li>
-                  <li>3. Increase customer loyalty.</li>
-                </ol>
-              </p>
+              <p>Our tool will help {localStorage.getItem("CompanyName")}:</p>
+              <ol className="space-y-2">
+                <li>1. Introduce your product to target users.</li>
+                <li>2. Create memorable and meaningful brand experience.</li>
+                <li>3. Increase customer loyalty.</li>
+              </ol>
               <br />
               <p>
                 I will be in touch with you to ensure you get optimal value when

@@ -14,7 +14,7 @@ const Waitlists = () => {
             The Future of Experiential Marketing
           </h1>
           <p className="pt-3">
-            Tell your story. Introduce your product. Build user loyalty
+            Tell your story. Introduce your product. Build user loyalty.
           </p>
           <Form />
         </div>
