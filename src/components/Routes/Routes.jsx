@@ -30,8 +30,8 @@ const Routes = () => {
               Email: <span className="text-lg font-bold">{user.email}</span>
             </p>
             <p className="text-lg">
-              Phone Number:{" "}
-              <span className="text-lg font-bold px-3">{user.number}</span>
+              Company Name:{" "}
+              <span className="text-lg font-bold px-3">{user.companyName}</span>
             </p>
           </div>
           <hr />
